@@ -29,7 +29,7 @@ func (dict *StringIntMap) Copy() map[string]int {
 	return result
 }
 
-func (dict *StringIntMap) Exist(key string) bool {
+func (dict *StringIntMap) Exists(key string) bool {
 	_, ok := dict.data[key]
 	return ok
 }
@@ -62,8 +62,8 @@ func main() {
 	fmt.Printf("%v\n\n", dictCopy)
 
 	dictCopy["potato"] = 100
-	fmt.Printf("Potato: %v\n", dict.Exist("potato"))
-	fmt.Printf("Apple: %v\n", dict.Exist("apple"))
+	fmt.Printf("Potato: %v\n", dict.Exists("potato"))
+	fmt.Printf("Apple: %v\n", dict.Exists("apple"))
 
 	value, ok := dict.Get("banana")
 	if ok {
